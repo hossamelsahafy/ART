@@ -1,15 +1,18 @@
-import { CollectionConfig } from 'payload'
-import SlidersImage from '../components/payload/MediaMultiSelect'
+import { CollectionConfig } from 'payload/'
+import SliderImages from '../components/payload/MediaMultiSelect'
 
 export const SlidersImages: CollectionConfig = {
   slug: 'sliders-images',
-  label: 'صور السلايدر',
   admin: {
     group: 'الصفحة الرئيسية',
+    defaultColumns: ['sliderImages'],
   },
   access: {
     read: () => true,
+    update: () => true,
+    create: () => true,
   },
+
   fields: [
     {
       name: 'sliderImages',
@@ -19,21 +22,9 @@ export const SlidersImages: CollectionConfig = {
       hasMany: true,
       admin: {
         components: {
-          Field: SlidersImage,
+          Field: SliderImages,
         },
       },
     },
-    // {
-    //   name: 'partners',
-    //   label: 'صور الشركاء',
-    //   type: 'relationship',
-    //   relationTo: 'media',
-    //   hasMany: true,
-    //   admin: {
-    //     components: {
-    //       Field: MediaMultiSelect,
-    //     },
-    //   },
-    // },
   ],
 }
