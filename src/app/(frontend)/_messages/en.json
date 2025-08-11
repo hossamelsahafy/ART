@@ -1,0 +1,65 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "products": "Our Products",
+    "contact": "Contact Us",
+    "language": "العربية"
+  },
+  "About": {
+    "cert": "Certificates",
+    "button": "Contact Us",
+    "who": "About us",
+    "title": "Art Packaging Factory Company for manufacturing cardboard boxes and paper bags is considered one of the largest and leading industrial companies in manufacturing and supplying luxury cardboard boxes and distinctive bags in the Kingdom of Saudi Arabia and the Middle East region. Our national journey for paper products began in 2005 AD, that is, nearly twenty years ago, with a small production capacity until it reached a very high production capacity with a production area of ​​more than 4,000 square meters. The Art Packaging Factory includes an integrated team trained and qualified to reach high levels of operational efficiency within quality control systems and standards using the latest production lines globally in all stages of manufacturing. We specialize in luxury boxes for various types of sweets, chocolate and dates. From the beginning, we adopted our slogan: We care, we innovate… Here let us pause for a moment: We have been in the art of packaging since our beginning. Our interest in this part of the sector stems from our passion for developing everything creative in the world of chocolate and sweets, which made us innovative in our field. We also added, due to the need for the boxes to arrange the products inside them, the internal partitions made of PET material and shaped them to aesthetically match the external appearance of the box according to the customer’s desire, to increase the boxes with a wonderful aesthetic perspective. The Art of Packaging Factory takes into account absolute priority in delivery times to customers, which is the focus of our attention and the method of transportation and storage to reach product to the customer."
+  },
+  "contact": {
+    "letsOne": "Let's Discuss your",
+    "letsTwo": "Inquiry",
+    "Contact": "Contact Us",
+    "Name": "Name",
+    "Phone": "Phone Number",
+    "Message": "Message",
+    "Submit": "Submit",
+    "Email": "Email",
+    "SuccessMessage": "Message sent successfully!",
+    "ErrorMessage": "SomeThing Is Wrong Try Again Later"
+  },
+  "LetsWork": {
+    "First": "LET’S WORK",
+    "Second": "TOGETHER",
+    "Button": "Click Here"
+  },
+  "SucessPartner": {
+    "Title": "Success Partners"
+  },
+  "Speach" : {
+    "Title": "Fashion also has a special world/ The product also has a special world of fashion. Let us choose fashion/ from The paper suits your product"
+  },
+  "Service": {
+    "Title": "Our Services",
+    "Des": "The Art Packaging Factory serves you with the best specifications and standards and the highest quality within the Saudi market",
+    "Read": "READ MORE"
+  },
+  "OurProducts": {
+    "Title": "Our Products",
+    "Des" : "We present our products to you in a charming and attractive way with artistic touches in a modern style that is unparalleled",
+    "Button": "Packages For You"
+  },
+  "SingleProduct": {
+    "Button": "Request a Quote",
+    "Description": "Description",
+    "Home": "Home",
+    "Product": "Our Product",
+    "Loading" : "Loading Product"
+
+  },
+  "Footer" : {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "products": "Products"
+  },
+  "Loading" : "Loading Products"
+
+}

@@ -1,0 +1,10 @@
+.sidebar {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* خلي محتوى الصفحة يعوض ان الشريط على اليمين */
+.main-content {
+  margin-left: 0 !important;
+  margin-right: 260px !important; /* نفس عرض الشريط الجانبي */
+}
