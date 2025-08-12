@@ -18,8 +18,8 @@ interface SliderImagesProps {
 }
 
 const SliderImages: React.FC<SliderImagesProps> = ({
-  name = '',
-  label = 'Slider Images',
+  name = 'partners',
+  label = 'Partners Images',
   onChange,
   relationTo = 'media',
   hasMany = true,
@@ -89,7 +89,7 @@ const SliderImages: React.FC<SliderImagesProps> = ({
   }
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%',  margin: "10px"}}>
       <label
         htmlFor={`searchInput-${name}`}
         style={{ display: 'block', marginBottom: 6, fontWeight: 'bold', fontSize: 14 }}

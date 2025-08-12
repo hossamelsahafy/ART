@@ -1,21 +1,25 @@
-import Image from "next/image";
-
-import ImagesSlider from "./ImagesSlider";
+import Image from 'next/image'
+import ImagesSlider from './ImagesSlider'
 
 const ImageSliderSection = async ({ locale }) => {
   const fetchData = async () => {
     try {
-      return await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/globals/sliders-images`
-      )
-        .then((res) => res.json())
-        .then((data) => data.partners);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/sliders-images`)
+      const data = await response.json()
+      console.log('Full API response:', data)
+
+      // دمج كل الـ partners من كل doc في مصفوفة واحدة
+      const allPartners = data.docs.flatMap((doc) => doc.partners || [])
+      return allPartners
     } catch (error) {
-      console.error(error);
-      return [];
+      console.error('Fetch error:', error)
+      return []
     }
-  };
-  const images = await fetchData();
+  }
+
+  // Await the promise here
+  const images = await fetchData()
+  console.log(images)
 
   return (
     <section
@@ -31,7 +35,7 @@ const ImageSliderSection = async ({ locale }) => {
       />
       <ImagesSlider images={images} />
     </section>
-  );
-};
+  )
+}
 
-export default ImageSliderSection;
+export default ImageSliderSection

@@ -1,11 +1,11 @@
-import { CollectionConfig } from 'payload/'
+import { GlobalConfig } from 'payload/'
 import SliderImages from '../components/payload/MediaMultiSelect'
+import PartnersImages from '../components/payload/Partners'
 
-export const SlidersImages: CollectionConfig = {
+export const SlidersImages: GlobalConfig = {
   slug: 'sliders-images',
   admin: {
     group: 'الصفحة الرئيسية',
-    defaultColumns: ['sliderImages'],
   },
   hooks: {
     afterChange: [
@@ -30,6 +30,18 @@ export const SlidersImages: CollectionConfig = {
       admin: {
         components: {
           Field: SliderImages,
+        },
+      },
+    },
+    {
+      name: 'partners',
+      type: 'relationship',
+      label: 'شركاء النجاح',
+      relationTo: 'media',
+      hasMany: true,
+      admin: {
+        components: {
+          Field: PartnersImages,
         },
       },
     },
