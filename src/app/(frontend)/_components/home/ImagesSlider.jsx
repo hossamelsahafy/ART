@@ -18,6 +18,7 @@ const ImagesSlider = ({ images }) => {
         setSlideWidth(270)
       }
     }
+    console.log('###############################', images)
 
     updateWidth()
     window.addEventListener('resize', updateWidth)

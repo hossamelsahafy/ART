@@ -6,20 +6,18 @@ const ImageSliderSection = async ({ locale }) => {
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/sliders-images`)
       const data = await response.json()
-      console.log('Full API response:', data)
-
-      // دمج كل الـ partners من كل doc في مصفوفة واحدة
-      const allPartners = data.docs.flatMap((doc) => doc.partners || [])
-      return allPartners
+      return data.docs || []
     } catch (error) {
       console.error('Fetch error:', error)
       return []
     }
   }
 
-  // Await the promise here
-  const images = await fetchData()
-  console.log(images)
+  const docs = await fetchData()
+
+  const images = docs
+    .filter((doc) => Array.isArray(doc.sliderImages) && doc.sliderImages.length > 0)
+    .flatMap((doc) => doc.sliderImages)
 
   return (
     <section

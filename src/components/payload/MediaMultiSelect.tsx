@@ -35,9 +35,13 @@ const SliderImages: React.FC<SliderImagesProps> = ({
     if (selectedIds.includes(id)) {
       setSelectedIds([])
       setValue(null)
+      console.log('Selection cleared')
+
     } else {
       setSelectedIds([id])
       setValue(id)
+      const selectedItem = mediaItems.find(item => item.id === id)
+    console.log('Selected image:', selectedItem)
     }
   }
 
@@ -56,6 +60,8 @@ const SliderImages: React.FC<SliderImagesProps> = ({
         const items: MediaItem[] = data.docs || data
 
         setMediaItems(items)
+        console.log('Fetched media items:', items)
+
       } catch (error) {
       } finally {
         setIsLoading(false)
@@ -65,6 +71,8 @@ const SliderImages: React.FC<SliderImagesProps> = ({
   }, [relationTo])
 
   useEffect(() => {
+    console.log("External value changed", value);
+    
     if (value) {
       if (Array.isArray(value)) {
         setSelectedIds(value.length > 0 ? [value[0]] : [])
@@ -83,6 +91,8 @@ const SliderImages: React.FC<SliderImagesProps> = ({
   )
 
   const selectedIdsStr = selectedIds.map((id) => String(id))
+  console.log(selectedIdsStr);
+  
 
   if (isLoading) {
     return <div>Loading images...</div>
