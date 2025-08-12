@@ -26,14 +26,13 @@ const ImagesSlider = ({ images }) => {
     return () => window.removeEventListener('resize', updateWidth)
   }, [])
 
-  if (!mounted) return null // Don't render on server
+  if (!mounted) return null
 
   return (
     <div className="-rotate-6 mt-8 md:mt-20 w-[112vw] md:w-[105vw] -translate-x-10">
       <Slider width={`${slideWidth}px`} duration={80} blurBorders={false} blurBorderColor={'#fff'}>
         {images.map((image, index) => (
           <Slider.Slide className="p-2" key={index}>
-            <h1>{image.url}</h1>
             <img src={image.url} alt="slider_image" className="aspect-square rounded-[30px] mx-5" />
           </Slider.Slide>
         ))}

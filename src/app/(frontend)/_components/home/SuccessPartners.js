@@ -25,9 +25,9 @@ const SuccessPartners = () => {
         }
         const data = await response.json()
 
-        const partners = data.sliderImages || []
-        const imageUrls = partners.map((partner) => partner.url)
-        setImages(imageUrls)
+        const allPartners = data.docs.flatMap((doc) => doc.partners || [])
+
+        setImages(allPartners)
       } catch (error) {
         setError(error.message)
       } finally {
@@ -66,10 +66,10 @@ const SuccessPartners = () => {
             }}
             className="flex"
           >
-            {images.map((src, index) => (
+            {images.map((partner, index) => (
               <SwiperSlide key={index} className="w-auto flex justify-center items-center">
                 <img
-                  src={src}
+                  src={partner.url}
                   alt={`Partner ${index + 1}`}
                   className="w-[100px] h-[100px] object-contain rounded-lg transition-transform"
                 />
