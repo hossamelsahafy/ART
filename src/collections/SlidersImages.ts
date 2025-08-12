@@ -7,6 +7,13 @@ export const SlidersImages: CollectionConfig = {
     group: 'الصفحة الرئيسية',
     defaultColumns: ['sliderImages'],
   },
+  hooks: {
+    afterChange: [
+      (args) => {
+        console.log(args.doc)
+      },
+    ],
+  },
   access: {
     read: () => true,
     update: () => true,
