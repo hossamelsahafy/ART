@@ -33,7 +33,7 @@ export default buildConfig({
 
   collections: [Users, Media, Categories, Products, Services, SlidersImages],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || 'lksdjf;ldjsfd;jk',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
